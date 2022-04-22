@@ -41,3 +41,17 @@ echo "création de votre fichier html, quel est le nom?"
 read nom
 touch $nom.html
 echo "votre fichier "$nom.html" a bien été crée!"
+#ajout des balises principales
+echo "voulez-vous que j'ajoute la structure de base html à votre fichier?: y/n?"
+read balises
+if [ $balises == "y"];then
+#ci dessous l'ajout du contenu html
+echo "<!DOCTYPE html>
+<html lang='fr'>
+<head>
+</head>
+<body> 
+</body>
+</html>" >> $nom.html
+echo "La structure de base html a correctement été ajoutée!"
+fi
