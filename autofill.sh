@@ -88,3 +88,10 @@ if [ $adv == "y" ];then
 sed -i "11i\ <header> <nav> YOUR NAV HERE </nav> </header>" $nom.html
 sed -i "13i\ <footer> YOUR FOOTER HERE </footer>" $nom.html
 echo "les balises avancées ont été ajoutées avec succès!"
+#Localisation du fichier
+echo "Voulez-vous connaître l'emplacement de votre fichier?"
+read locate
+if [ $locate == "y" ];then
+echo "votre fichier "$nom.html" se trouve à l'emplacement suivant:"
+echo `pwd`/$nom.html
+fi
