@@ -36,3 +36,8 @@ echo "Merci d'avoir choisis AUTOFILL-INDEX"
 elif [ $continuer == "n" ];then
 exit
 fi
+#création du fichier html
+echo "création de votre fichier html, quel est le nom?"
+read nom
+touch $nom.html
+echo "votre fichier "$nom.html" a bien été crée!"
