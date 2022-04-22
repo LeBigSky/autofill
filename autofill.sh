@@ -95,3 +95,10 @@ if [ $locate == "y" ];then
 echo "votre fichier "$nom.html" se trouve à l'emplacement suivant:"
 echo `pwd`/$nom.html
 fi
+#fin de l'execution
+echo "
+ ________________________________________________________________
+|                   MERCI D'AVOIR CHOISI :                       |
+|                 -->  AUTOFILL-INDEX                            |
+|               Votre fichier est terminé !                      |
+|________________________________________________________________|"
