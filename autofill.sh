@@ -74,3 +74,10 @@ sed -i "7i\ <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bo
 sed -i "10i\ <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous'></script>" $nom.html
 echo "Bootstrap (ver: 5.1.3) a correctement été configuré!"
 fi
+#Insertion de FontAwesome
+echo "voulez-vous que j'ajoute FontAwesome?: y/n?"
+read font
+if [ $font == "y" ];then
+sed -i "8i\ <script src='https://kit.fontawesome.com/41a38595de.js' crossorigin='anonymous'></script>" $nom.html
+echo "FontAwesome ver.5 à été ajouté!"
+fi
