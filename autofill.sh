@@ -55,3 +55,14 @@ echo "<!DOCTYPE html>
 </html>" >> $nom.html
 echo "La structure de base html a correctement été ajoutée!"
 fi
+#Insertion la balise head
+echo "Voulez vous que j'insère la balise <head> (charset, vieuwport, x-ua...)?: y/n?"
+read head
+if [ $head == "y" ];then
+sed -i "4i\ <meta charset='UTF-8'>" $nom.html
+sed -i "5i\ <meta name='viewport' content='width=device-width, initial-scale=1.0'>" $nom.html
+sed -i "6i\ <meta http-equiv='X-UA-Compatible' content='IE=edge'>" $nom.html
+echo "Le <head> a correctement été configurée!"
+elif [ $continuer == "n" ];then
+echo "ATTENTION: Le <head> n'as pas été configurés!"
+fi
