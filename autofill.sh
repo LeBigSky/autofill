@@ -81,3 +81,10 @@ if [ $font == "y" ];then
 sed -i "8i\ <script src='https://kit.fontawesome.com/41a38595de.js' crossorigin='anonymous'></script>" $nom.html
 echo "FontAwesome ver.5 à été ajouté!"
 fi
+#Insertion structures avancées
+echo "Voulez-vous que j'ajoute des balises avancées (header, nav, footer)?: y/n?"
+read adv
+if [ $adv == "y" ];then
+sed -i "11i\ <header> <nav> YOUR NAV HERE </nav> </header>" $nom.html
+sed -i "13i\ <footer> YOUR FOOTER HERE </footer>" $nom.html
+echo "les balises avancées ont été ajoutées avec succès!"
