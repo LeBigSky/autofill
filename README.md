@@ -1,6 +1,6 @@
 # English
 autofill is bash script that create an index.html with multiple common features in very fast way...
-Actually only available in french, english and spanish will coming soon!
+Actually only available in french. English and spanish will coming soon!
 
 # Français
 autofill est un script bash de création de page html ajoutant automatiquement diverses fonctionalitées...                           
