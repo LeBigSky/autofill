@@ -2,10 +2,11 @@
 #########################################################
 #                   AUTOFILL-INDEX                      #       
 #                                                       #
-# Description: Remplissage auto de l'index htlm         #
+#       Description:                                    #
+#       --> Remplissage auto de l'index htlm            #
 #                                                       #
-# Auteur: Gary "El-Padre"                               #
+#       Auteur: Gary "El-Padre"                         #
 #                                                       #
-# Date: MARS 2022 - Version: Alpha v1                   #
+#       Date: MARS 2022 - Version: Alpha v1             #
 #                                                       #
 #########################################################
