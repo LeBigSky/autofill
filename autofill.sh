@@ -28,3 +28,11 @@ AU MENU DE CE SCRIPT:
 |	-> ajout de structures avancées: header/nav/footer                                     |
 |______________________________________________________________________________________________|
 "
+# confirmation du démarrage du script
+echo "Salution ! Bienvenu dans 'AUTOFILL-INDEX' (by Gary Axen) désirez-vous continuer? : y/n?"
+read continuer
+if [ $continuer == "y" ] || [ $contniuer == "Y" ] ;then
+echo "Merci d'avoir choisis AUTOFILL-INDEX"
+elif [ $continuer == "n" ];then
+exit
+fi
