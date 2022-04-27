@@ -94,10 +94,13 @@ fi
 #Insertion structures avancées
 echo "Voulez-vous que j'ajoute des balises avancées (header, nav, footer)?: y/n?"
 read adv
-if [ $adv == "y" ];then
+if [ $adv == "y" ] || [ $adv == "Y"];then
 sed -i "11i\ <header> <nav> YOUR NAV HERE </nav> </header>" $nom.html
 sed -i "13i\ <footer> YOUR FOOTER HERE </footer>" $nom.html
 echo "les balises avancées ont été ajoutées avec succès!"
+elif [ $adv == "n"] || [ $adv == "N"];then
+echo "Aucunes balises avancées n'as été ajoutée!"
+fi
 #Localisation du fichier
 echo "Voulez-vous connaître l'emplacement de votre fichier?"
 read locate
