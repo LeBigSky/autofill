@@ -84,9 +84,12 @@ fi
 #Insertion de FontAwesome
 echo "voulez-vous que j'ajoute FontAwesome?: y/n?"
 read font
-if [ $font == "y" ];then
+if [ $font == "y" ] || [ $font == "Y"];then
 sed -i "8i\ <script src='https://kit.fontawesome.com/41a38595de.js' crossorigin='anonymous'></script>" $nom.html
 echo "FontAwesome ver.5 à été ajouté!"
+elif [ $font == "n"] || [ $font == "N"];then
+echo "FontAwesome n'as pas été ajouté!"
+exit
 fi
 #Insertion structures avancées
 echo "Voulez-vous que j'ajoute des balises avancées (header, nav, footer)?: y/n?"
