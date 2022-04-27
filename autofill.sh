@@ -55,7 +55,7 @@ echo "<!DOCTYPE html>
 </body>
 </html>" >> $nom.html
 echo "La structure de base html a correctement été ajoutée!"
-elif [balises == "n"] || [ $balises == "N"];then
+elif [balises == "n" ] || [ $balises == "N" ];then
 echo ""$nom.html" ne contient aucune structure"
 fi
 #Insertion la balise head
@@ -73,21 +73,21 @@ fi
 #Insertion de Bootstrap
 echo "Voulez-vous que j'ajoute Bootstrap?: y/n?"
 read Boot
-if [ $boot == "y" ] || [ $boot == "Y"];then
+if [ $boot == "y" ] || [ $boot == "Y" ];then
 sed -i "7i\ <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous'>" $nom.html
 sed -i "10i\ <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous'></script>" $nom.html
 echo "Bootstrap (ver: 5.1.3) a correctement été configuré!"
-elif [ $boot == "n"] || [ $boot == "N"];then
+elif [ $boot == "n"] || [ $boot == "N" ];then
 echo "Bootstrap n'as pas été ajouté"
 exit
 fi
 #Insertion de FontAwesome
 echo "voulez-vous que j'ajoute FontAwesome?: y/n?"
 read font
-if [ $font == "y" ] || [ $font == "Y"];then
+if [ $font == "y" ] || [ $font == "Y" ];then
 sed -i "8i\ <script src='https://kit.fontawesome.com/41a38595de.js' crossorigin='anonymous'></script>" $nom.html
 echo "FontAwesome ver.5 à été ajouté!"
-elif [ $font == "n"] || [ $font == "N"];then
+elif [ $font == "n" ] || [ $font == "N" ];then
 echo "FontAwesome n'as pas été ajouté!"
 exit
 fi
@@ -104,9 +104,10 @@ fi
 #Localisation du fichier
 echo "Voulez-vous connaître l'emplacement de votre fichier?"
 read locate
-if [ $locate == "y" ];then
+if [ $locate == "y" ] || [ $locate == "Y" ];then
 echo "votre fichier "$nom.html" se trouve à l'emplacement suivant:"
 echo `pwd`/$nom.html
+elif [ $locate == "n" ] || [ $locate == "N" ];then
 fi
 #fin de l'execution
 echo "
