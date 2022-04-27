@@ -45,7 +45,7 @@ echo "votre fichier "$nom.html" a bien été crée!"
 #ajout des balises principales
 echo "voulez-vous que j'ajoute la structure de base html à votre fichier?: y/n?"
 read balises
-if [ $balises == "y"];then
+if [ $balises == "y"] || [ $balises == "Y"];then
 #ci dessous l'ajout du contenu html
 echo "<!DOCTYPE html>
 <html lang='fr'>
@@ -55,6 +55,8 @@ echo "<!DOCTYPE html>
 </body>
 </html>" >> $nom.html
 echo "La structure de base html a correctement été ajoutée!"
+elif [balises == "n"] || [ $balises == "N"];then
+echo ""$nom.html" ne contient aucune structure"
 fi
 #Insertion la balise head
 echo "Voulez vous que j'insère la balise <head> (charset, vieuwport, x-ua...)?: y/n?"
